@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHL Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --dhl-yellow: #FFCC00; --dhl-red: #D40511; }
+        .bg-dhl-yellow { background-color: var(--dhl-yellow); }
+        .text-dhl-red { color: var(--dhl-red); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-black text-dhl-red italic">DHL</div>
+        <div class="space-x-4 font-bold text-sm">
+            <a href="#home" class="hover:text-dhl-red">HOME</a>
+            <a href="#details" class="hover:text-dhl-red">DETAILS</a>
+        </div>
+    </nav>
+    <header id="home" class="bg-dhl-yellow py-16 px-6 text-center">
+        <h1 class="text-3xl font-black text-black uppercase mb-4">Precision Drives Sustainability</h1>
+        <p class="text-lg font-medium text-gray-800 italic">"Speed comes from precision"</p>
+    </header>
+    <main id="details" class="p-6">
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-xl shadow-lg border-b-4 border-dhl-red">
+                <p class="text-gray-500 text-xs font-bold uppercase">OTD Rate</p>
+                <p class="text-3xl font-black">86%</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-lg border-b-4 border-dhl-red">
+                <p class="text-gray-500 text-xs font-bold uppercase">FAF Rate</p>
+                <p class="text-3xl font-black text-dhl-red">9%</p>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h2 class="font-black text-xl mb-4 uppercase border-l-4 border-black pl-3">6-Week Roadmap</h2>
+            <div class="space-y-4">
+                <div class="flex items-center"><span class="bg-dhl-yellow font-bold px-2 py-1 rounded mr-3 text-xs">W1-2</span> <span class="text-sm font-bold uppercase">Diagnose</span></div>
+                <div class="flex items-center"><span class="bg-dhl-yellow font-bold px-2 py-1 rounded mr-3 text-xs">W3-4</span> <span class="text-sm font-bold uppercase">Pilot</span></div>
+                <div class="flex items-center"><span class="bg-dhl-yellow font-bold px-2 py-1 rounded mr-3 text-xs">W5-6</span> <span class="text-sm font-bold uppercase">Scale</span></div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-black text-white py-10 text-center mt-10">
+        <p class="text-xs opacity-50">© 2024 DHL Logistics Project - Hoang Hiep</p>
+    </footer>
+</body>
+</html>
