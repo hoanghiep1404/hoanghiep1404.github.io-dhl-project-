@@ -3,48 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DHL Dashboard</title>
+    <title>DHL Dashboard - Hoang Hiep</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --dhl-yellow: #FFCC00; --dhl-red: #D40511; }
-        .bg-dhl-yellow { background-color: var(--dhl-yellow); }
-        .text-dhl-red { color: var(--dhl-red); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+        .dhl-gradient { background: linear-gradient(135deg, #FFCC00 0%, #ffdb4d 100%); }
+        .card-hover:hover { transform: translateY(-10px); transition: 0.3s; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--dhl-red); margin: 10px auto; }
     </style>
 </head>
 <body class="bg-gray-50">
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
-        <div class="text-2xl font-black text-dhl-red italic">DHL</div>
-        <div class="space-x-4 font-bold text-sm">
-            <a href="#home" class="hover:text-dhl-red">HOME</a>
-            <a href="#details" class="hover:text-dhl-red">DETAILS</a>
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-dhl-red text-white font-black px-3 py-1 italic">DHL</div>
+                <span class="font-bold text-gray-700 tracking-widest text-xs">PROJECT</span>
+            </div>
+            <div class="hidden md:flex space-x-6 font-bold text-xs uppercase text-gray-600">
+                <a href="#home" class="hover:text-dhl-red">Home</a>
+                <a href="#about" class="hover:text-dhl-red">About</a>
+                <a href="#problem" class="hover:text-dhl-red">Challenge</a>
+                <a href="#roadmap" class="hover:text-dhl-red">Roadmap</a>
+            </div>
         </div>
     </nav>
-    <header id="home" class="bg-dhl-yellow py-16 px-6 text-center">
-        <h1 class="text-3xl font-black text-black uppercase mb-4">Precision Drives Sustainability</h1>
-        <p class="text-lg font-medium text-gray-800 italic">"Speed comes from precision"</p>
-    </header>
-    <main id="details" class="p-6">
-        <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-white p-4 rounded-xl shadow-lg border-b-4 border-dhl-red">
-                <p class="text-gray-500 text-xs font-bold uppercase">OTD Rate</p>
-                <p class="text-3xl font-black">86%</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-lg border-b-4 border-dhl-red">
-                <p class="text-gray-500 text-xs font-bold uppercase">FAF Rate</p>
-                <p class="text-3xl font-black text-dhl-red">9%</p>
+
+    <section id="home" class="dhl-gradient py-20 px-6 text-center border-b-8 border-[#D40511]">
+        <div class="max-w-4xl mx-auto animate__animated animate__fadeIn">
+            <h1 class="text-4xl md:text-6xl font-black text-black mb-4 uppercase italic leading-tight">
+                Precision Drives<br><span class="text-dhl-red">Sustainability</span>
+            </h1>
+            <p class="text-xl mb-10 text-gray-800 font-medium italic">"Accuracy in every detail - Speed comes from precision"</p>
+            <div class="flex justify-center gap-4">
+                <a href="#problem" class="bg-black text-white px-8 py-3 rounded-lg font-bold shadow-xl hover:bg-gray-800 transition uppercase text-sm">Explore Data</a>
+                <a href="#roadmap" class="bg-white text-black px-8 py-3 rounded-lg font-bold shadow-xl hover:bg-gray-100 transition uppercase text-sm">Roadmap</a>
             </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h2 class="font-black text-xl mb-4 uppercase border-l-4 border-black pl-3">6-Week Roadmap</h2>
-            <div class="space-y-4">
-                <div class="flex items-center"><span class="bg-dhl-yellow font-bold px-2 py-1 rounded mr-3 text-xs">W1-2</span> <span class="text-sm font-bold uppercase">Diagnose</span></div>
-                <div class="flex items-center"><span class="bg-dhl-yellow font-bold px-2 py-1 rounded mr-3 text-xs">W3-4</span> <span class="text-sm font-bold uppercase">Pilot</span></div>
-                <div class="flex items-center"><span class="bg-dhl-yellow font-bold px-2 py-1 rounded mr-3 text-xs">W5-6</span> <span class="text-sm font-bold uppercase">Scale</span></div>
+    </section>
+
+    <section id="about" class="py-20 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate__animated animate__slideInLeft">
+                <h2 class="text-3xl font-bold mb-6 uppercase tracking-widest section-title text-center md:text-left">About Us</h2>
+                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                    Tại dự án DHL lần này, đội ngũ của chúng tôi tập trung vào giải quyết bài toán vận hành thực tế. Chúng tôi tin rằng <strong>sự chính xác</strong> không chỉ giúp tăng hiệu quả mà còn là chìa khóa dẫn đến <strong>sự bền vững</strong> cho môi trường.
+                </p>
+                <div class="bg-yellow-100 p-4 border-l-4 border-dhl-yellow italic font-medium">
+                    "Giảm lãng phí, tối ưu chi phí, nâng tầm thương hiệu DHL."
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl animate__animated animate__zoomIn">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800" alt="Logistics">
             </div>
         </div>
-    </main>
-    <footer class="bg-black text-white py-10 text-center mt-10">
-        <p class="text-xs opacity-50">© 2024 DHL Logistics Project - Hoang Hiep</p>
+    </section>
+
+    <section id="problem" class="bg-zinc-900 py-20 px-6 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16 uppercase tracking-widest section-title">Current Challenge</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-zinc-800 p-6 rounded-2xl border-b-4 border-dhl-yellow card-hover">
+                    <p class="text-gray-400 text-xs font-bold uppercase mb-2">OTD Rate</p>
+                    <p class="text-4xl font-black text-[#FFCC00]">86%</p>
+                </div>
+                <div class="bg-zinc-800 p-6 rounded-2xl border-b-4 border-dhl-red card-hover">
+                    <p class="text-gray-400 text-xs font-bold uppercase mb-2 text-dhl-red">FAF Rate</p>
+                    <p class="text-4xl font-black text-dhl-red">9%</p>
+                </div>
+                <div class="bg-zinc-800 p-6 rounded-2xl border-b-4 border-white card-hover">
+                    <p class="text-gray-400 text-xs font-bold uppercase mb-2">Cost</p>
+                    <p class="text-4xl font-black">+6%</p>
+                </div>
+                <div class="bg-zinc-800 p-6 rounded-2xl border-b-4 border-green-500 card-hover">
+                    <p class="text-gray-400 text-xs font-bold uppercase mb-2 text-green-500">Carbon</p>
+                    <p class="text-4xl font-black text-green-500">+12%</p>
+                </div>
+            </div>
+            <p class="mt-12 text-gray-400 italic">Insight: "Double Decline" - Khi hiệu quả giảm, lãng phí tăng.</p>
+        </div>
+    </section>
+
+    <section id="roadmap" class="py-20 container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 uppercase tracking-widest section-title">6-Week Execution</h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+            <div class="flex items-center bg-white p-6 rounded-xl shadow-lg border-l-8 border-dhl-yellow card-hover">
+                <div class="bg-dhl-yellow text-black font-black px-4 py-2 rounded mr-6 italic">W1-2</div>
+                <div>
+                    <h3 class="font-black uppercase">DIAGNOSE</h3>
+                    <p class="text-gray-500 text-sm">Phân tích lỗi Deliver & SCOR Model.</p>
+                </div>
+            </div>
+            <div class="flex items-center bg-white p-6 rounded-xl shadow-lg border-l-8 border-dhl-red card-hover">
+                <div class="bg-dhl-red text-white font-black px-4 py-2 rounded mr-6 italic">W3-4</div>
+                <div>
+                    <h3 class="font-black uppercase">PILOT</h3>
+                    <p class="text-gray-500 text-sm">Triển khai Smart Efficiency Technology.</p>
+                </div>
+            </div>
+            <div class="flex items-center bg-black text-white p-6 rounded-xl shadow-lg border-l-8 border-dhl-yellow card-hover">
+                <div class="bg-dhl-yellow text-black font-black px-4 py-2 rounded mr-6 italic">W5-6</div>
+                <div>
+                    <h3 class="font-black uppercase">SCALE</h3>
+                    <p class="text-gray-400 text-sm">Sustainability & Global Implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <div class="bg-dhl-red text-white font-black px-4 py-2 italic inline-block mb-4">DHL</div>
+            <p class="font-bold text-gray-800 uppercase tracking-widest">Team Sustainability</p>
+            <p class="text-gray-500 text-sm mt-2">© 2024 Final Project - Hoang Hiep 1404</p>
+        </div>
     </footer>
+
 </body>
 </html>
